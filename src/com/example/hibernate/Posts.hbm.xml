@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.example.business.entity">
+	<class name="Posts" table="posts">
+		<meta attribute="sync-DAO">false</meta>
+		<id name="id" type="long" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="title" column="title" type="string" not-null="false"
+			length="255" />
+		<property name="body" column="body" type="string" not-null="false"
+			length="900" />
+		<property name="userId" column="userId" type="long"
+			not-null="true" length="10" />
+		<property name="Tags" column="tags" type="string" not-null="false"
+			length="50" />
+		<property name="reactions" column="reactions" type="integer"
+			not-null="false" length="10" />
+	</class>
+</hibernate-mapping>
