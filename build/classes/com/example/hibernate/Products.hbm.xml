@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="com.example.business.entity">
+	<class name="Products" table="products">
+		<meta attribute="sync-DAO">false</meta>
+		<id name="id" type="long" column="id">
+			<generator class="identity" />
+		</id>
+		<property name="title" column="title" type="string" not-null="false"
+			length="30" />
+		<property name="descriptions" column="descriptions" type="string"
+			not-null="false" length="255" />
+		<property name="price" column="price" type="long"
+			not-null="false" length="10" />
+		<property name="discountPercentage" column="discountPercentage"
+			type="java.lang.Float" not-null="false" length="12" />
+		<property name="rating" column="rating" type="java.lang.Float"
+			not-null="false" length="12" />
+		<property name="stock" column="stock" type="long"
+			not-null="false" length="10" />
+		<property name="brand" column="brand" type="string" not-null="false"
+			length="30" />
+		<property name="category" column="category" type="string"
+			not-null="false" length="30" />
+		<property name="thumbnail" column="thumbnail" type="string"
+			not-null="false" length="255" />
+		<property name="image" column="image" type="string" not-null="false"
+			length="255" />
+	</class>
+</hibernate-mapping>

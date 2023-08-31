@@ -1,1 +1,1 @@
-# cas_study_springmvc
+Spring MVC + Hibernate
